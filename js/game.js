@@ -6,21 +6,21 @@ var game = {
     levels: {
 
         start: {
-            message: "You come across a dark cave",
+            message: "You've grown tired of this town, what should you do?",
             choices: [
                 {
-                    text: "Enter the cave",
-                    nextLevel: "cave",
+                    text: "Stay in Town",
+                    nextLevel: "stay",
                 },
 
                 {
-                    text: "Keep on moving",
-                    nextLevel: "field",
+                    text: "Leave Town",
+                    nextLevel: "leave",
                 },
             ]
         },
 
-        cave: {
+        stay: {
             background_image: "fire.gif",
             music: "Final-Fantasy-7-Boss-Battle.mp3",
             message: "You come across a fire monster or something!",
@@ -32,12 +32,18 @@ var game = {
             ]
         },
 
-        field: {
-            message: "Some adventurer you are...",
+        leave: {
+            message: "You decided to leave your small town! You become unsure if you want to contine...",
             choices: [
                 {
-                    text: "Start over",
+                    text: "Enter the Woods",
                     nextLevel: "start",
+                    
+                },
+                {
+                    text: "Go Back to Town",
+                    nextLevel: "stay"
+                    
                 },
             ]
         },
